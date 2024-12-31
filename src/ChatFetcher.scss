@@ -1,0 +1,133 @@
+.btnLogout {
+    margin-left: 40px;
+}
+
+.selfAnalyzation,
+.chatsFetched {
+    background-color: #091629;
+    /* Match background with main styling */
+    background-color: #091629;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 0;
+    min-height: 100vh;
+
+    h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #d8dfe9;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #d8dfe9;
+            color: #d8dfe9;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            strong {
+                color: #59a6ff;
+            }
+
+            span {
+                font-weight: 500;
+                margin-left: 10px;
+            }
+
+            &.Positive {
+                background-color: rgba(37, 253, 253, 0.1);
+            }
+
+            &.Negative {
+                background-color: rgba(255, 99, 132, 0.1);
+            }
+
+            &.Neutral {
+                background-color: rgba(255, 206, 86, 0.1);
+            }
+
+            &.Abusive {
+                background-color: rgba(255, 0, 0, 0.1);
+            }
+        }
+    }
+
+    p {
+        color: #d8dfe9;
+        font-size: 16px;
+    }
+
+    .backIcon {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .logo {
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        margin-left: 100px;
+        /* Space between icons */
+    }
+
+    .chartsContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        /* Reduced gap for a tighter layout */
+        padding: 10px;
+        /* Reduced padding */
+        width: 35%;
+        /* Reduced width to make graphs smaller */
+        max-width: 800px;
+        /* Reduced maximum width */
+        background-color: #0f1e36;
+        border-radius: 10px;
+        border: solid 1px #d8dfe9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px auto;
+
+        @media (max-width: 768px) {
+            padding: 10px;
+            width: 90%;
+            /* Full width for smaller screens */
+        }
+
+        h3 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        canvas {
+            max-width: 100%;
+            height: 200px;
+            /* Set a specific height for smaller graphs */
+            width: auto;
+        }
+    }
+
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+}
